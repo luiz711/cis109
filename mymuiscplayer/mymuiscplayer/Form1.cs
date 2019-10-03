@@ -19,12 +19,33 @@ namespace mymuiscplayer
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            player.Ctlcontrols.pause();
         }
 
-        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+
+        private void button1_Click(object sender, EventArgs e)
         {
+            if (openFileDialog1.ShowDialog()==DialogResult.OK)
+            {
+                textBox1.Text = openFileDialog1.FileName;
+            }
+            player.URL = textBox1.Text;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            player.Ctlcontrols.play();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            player.Ctlcontrols.stop();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Close();
 
         }
     }
-}
+} 
