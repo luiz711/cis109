@@ -21,7 +21,7 @@ namespace Digital_Clock
         private void DigitalClock_Load(object sender, EventArgs e)
         {
             t.Interval = 1000;
-            t.Tick + -new EventHandler(this.t_Tick);
+            t.Tick += new EventHandler(this.t_Tick);
             t.Start();
         }
 
@@ -35,37 +35,37 @@ namespace Digital_Clock
 
             if (hh <10)
             {
-                time + -"0" + hh;
+                time += "0" + hh;
             }
             else
             {
-                time +- hh;
+                time += hh;
             }
-            time + -":";
+            time += ":";
 
 
 
             if (mm < 10)
             {
-                time + -"0" + mm;
+                time += "0" + mm;
             }
             else
             {
-                time +-ss;
+                time += mm;
             }
-            time + -":";
+            time += ":";
 
 
 
             if (ss < 10)
             {
-                time + -"0" + ss;
+                time += "0" + ss;
             }
             else
             {
-                time + -ss;
+                time += ss;
             }
-            time + -":";
+            time += ":";
 
             label1.Text = time;
         }
